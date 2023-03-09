@@ -1,9 +1,10 @@
+using Negocio;
+
 namespace EducacionCorporal
 {
     public partial class FormularioIngreso : Form
     {
-        private const string USUARIO = "wortiz";
-        private const string CONTRASEÑA = "123456";
+        IServicioSeguridad seguridad = new ServicioSeguridadExterna();
         Color colorOriginal;
 
         public FormularioIngreso()
@@ -32,8 +33,7 @@ namespace EducacionCorporal
             }
             else
             {
-                if (nombreUsuario == USUARIO &&
-                    contraseña == CONTRASEÑA)
+                if (seguridad.ValidarUsuario(nombreUsuario, contraseña))
                 {
                     var formulario = new FormularioPrincipal();
                     formulario.Show();

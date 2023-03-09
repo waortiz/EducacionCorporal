@@ -1,17 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using EducacionCorporal.Entidades;
 using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace EducacionCorporal
 {
     public partial class FormularioPaciente : Form
     {
+        private IServicioMaestro servicioMaestro = new ServicioMaestro();
         public FormularioPaciente()
         {
             InitializeComponent();
@@ -24,25 +18,8 @@ namespace EducacionCorporal
         /// <param name="e">Parámetros del evento</param>
         private void FormularioPaciente_Load(object sender, EventArgs e)
         {
-            cboTipoDocumento.DataSource = ObtenerTiposDocumento();
+            cboTipoDocumento.DataSource = servicioMaestro.ObtenerTiposDocumento();
             cboTipoDocumento.DisplayMember = "Nombre";
-        }
-
-        /// <summary>
-        /// Este método pernmite obtener la lista de los tipos de
-        /// documento
-        /// </summary>
-        /// <returns>Lista de lis tipos de documento</returns>
-        private List<TipoDocumento> ObtenerTiposDocumento()
-        {
-            //Lista de los tipos de documento
-            var tiposDocumento = new List<TipoDocumento>();
-            tiposDocumento.Add(new TipoDocumento() { Id = 1, Nombre = "Cédula de Ciudadanía" });
-            tiposDocumento.Add(new TipoDocumento() { Id = 2, Nombre = "Tarjeta de Identidad" });
-            tiposDocumento.Add(new TipoDocumento() { Id = 2, Nombre = "Cédula de Extranjería" });
-
-            /*Se retorna la lista*/
-            return tiposDocumento;
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -72,6 +49,7 @@ namespace EducacionCorporal
                 else
                 {
                     //Guardamos al paciente
+                    
                     var mensaje = $"El ingreso es {ingresoBase.ToString("$#,###")}\n";
                     mensaje += $"La fecha de nacimiento es {dtpFechaNacimiento.Value.ToString("dd-MM-yyyy")}";
                     MessageBox.Show(mensaje);
