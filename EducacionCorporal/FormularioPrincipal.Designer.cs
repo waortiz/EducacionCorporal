@@ -83,6 +83,7 @@
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.nuevoPacienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.toolStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
@@ -536,6 +537,13 @@
             this.toolStripStatusLabel.Name = "toolStripStatusLabel";
             this.toolStripStatusLabel.Size = new System.Drawing.Size(42, 17);
             this.toolStripStatusLabel.Text = "Estado";
+            // 
+            // nuevoPacienteToolStripMenuItem
+            // 
+            this.nuevoPacienteToolStripMenuItem.Name = "nuevoPacienteToolStripMenuItem";
+            this.nuevoPacienteToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
+            this.nuevoPacienteToolStripMenuItem.Text = "Nuevo Paciente";
+            this.nuevoPacienteToolStripMenuItem.Click += new System.EventHandler(this.nuevoPacienteToolStripMenuItem_Click);
             // 
             // FormularioPrincipal
             // 
