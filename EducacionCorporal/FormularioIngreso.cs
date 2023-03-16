@@ -4,7 +4,7 @@ namespace EducacionCorporal
 {
     public partial class FormularioIngreso : Form
     {
-        IServicioSeguridad seguridad = new ServicioSeguridadExterna();
+        IServicioSeguridad seguridad = new ServicioSeguridad();
         Color colorOriginal;
 
         public FormularioIngreso()
@@ -19,30 +19,32 @@ namespace EducacionCorporal
         /// <param name="e">Parámetros del evento</param>
         private void btnIngresar_Click(object sender, EventArgs e)
         {
+            string nombreUsuario = txtUsuario.Text;
+            string contraseña = txtContraseña.Text;
+            erpMensaje.SetError(txtUsuario, null);
+            erpMensaje.SetError(txtContraseña, null);
+            if (string.IsNullOrEmpty(nombreUsuario))
             {
-                        }
-                    {
-                    }
-            {
-                {
-                    }
-                    {
+                erpMensaje.SetError(txtUsuario, "Ingrese el usuario");
             }
-
-            return true;
-        }
-
-
-        /// <summary>
-        /// Controlador de evento del botón Ingresar
-        /// </summary>
-        /// <param name="sender">Control que genera el evento</param>
-        /// <param name="e">Parámetros del evento</param>
-        private void btnIngresar_Click(object sender, EventArgs e)
-        {
-            var formulario = new FormularioPrincipal();
-            formulario.Show();
-            this.Hide();
+            else if (string.IsNullOrEmpty(contraseña))
+            {
+                erpMensaje.SetError(txtContraseña, "Ingrese la contraseña");
+            }
+            else
+            {
+                if (seguridad.ValidarUsuario(nombreUsuario, contraseña))
+                {
+                    var formulario = new FormularioPrincipal();
+                    formulario.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Los datos de ingreso no son válidos",
+                        "Usuario", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
 
         private void txtUsuario_TextChanged(object sender, EventArgs e)

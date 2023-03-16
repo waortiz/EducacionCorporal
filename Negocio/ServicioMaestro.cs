@@ -1,22 +1,25 @@
-﻿using EducacionCorporal.Entidades;
+﻿using Entidades;
 using Repositorio;
 
-public class ServicioMaestro : IServicioMaestro
+namespace Negocio
 {
-    private IRepositorioMaestro repositorioMaestro;
-    
-    public ServicioMaestro()
+    public class ServicioMaestro : IServicioMaestro
     {
-        repositorioMaestro = new RepositorioMaestro();
-    }
+        private IRepositorioMaestro repositorioMaestro;
 
-    public ServicioMaestro(IRepositorioMaestro repositorioMaestro)
-    {
-        this.repositorioMaestro = repositorioMaestro;
-    }
+        public ServicioMaestro()
+        {
+            repositorioMaestro = new RepositorioMaestroEF();
+        }
 
-    public List<TipoDocumento> ObtenerTiposDocumento()
-    {
-        return repositorioMaestro.ObtenerTiposDocumento();
+        public ServicioMaestro(IRepositorioMaestro repositorioMaestro)
+        {
+            this.repositorioMaestro = repositorioMaestro;
+        }
+
+        public List<TipoDocumento> ObtenerTiposDocumento()
+        {
+            return repositorioMaestro.ObtenerTiposDocumento();
+        }
     }
 }

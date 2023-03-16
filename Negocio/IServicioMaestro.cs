@@ -1,6 +1,9 @@
-﻿using EducacionCorporal.Entidades;
+﻿using Entidades;
 
-public interface IServicioMaestro
+namespace Negocio
 {
-    List<TipoDocumento> ObtenerTiposDocumento();
+    public interface IServicioMaestro
+    {
+        List<TipoDocumento> ObtenerTiposDocumento();
+    }
 }

@@ -28,280 +28,315 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.btnGuardar = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.lblFechaNacimiento = new System.Windows.Forms.Label();
-            this.dtpFechaNacimiento = new System.Windows.Forms.DateTimePicker();
-            this.lblPrimerNombre = new System.Windows.Forms.Label();
-            this.txtPrimerNombre = new System.Windows.Forms.TextBox();
-            this.txtSegundoNombre = new System.Windows.Forms.TextBox();
-            this.lblSegundoNombre = new System.Windows.Forms.Label();
-            this.txtPrimerApellido = new System.Windows.Forms.TextBox();
-            this.lblPrimerApellido = new System.Windows.Forms.Label();
-            this.txtSegundoApellido = new System.Windows.Forms.TextBox();
-            this.lblSegundoApellido = new System.Windows.Forms.Label();
-            this.chkTitular = new System.Windows.Forms.CheckBox();
-            this.lblTitular = new System.Windows.Forms.Label();
-            this.rdbFemenino = new System.Windows.Forms.RadioButton();
-            this.lblSexo = new System.Windows.Forms.Label();
-            this.rdbMasculino = new System.Windows.Forms.RadioButton();
-            this.lblTipoDocumento = new System.Windows.Forms.Label();
-            this.cboTipoDocumento = new System.Windows.Forms.ComboBox();
-            this.erpMensaje = new System.Windows.Forms.ErrorProvider(this.components);
-            this.ttpMensaje = new System.Windows.Forms.ToolTip(this.components);
-            this.txtIngresoBase = new System.Windows.Forms.TextBox();
-            this.lblIngresoBase = new System.Windows.Forms.Label();
-            this.lblCelular = new System.Windows.Forms.Label();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.erpMensaje)).BeginInit();
-            this.SuspendLayout();
+            components = new System.ComponentModel.Container();
+            btnGuardar = new Button();
+            btnCancelar = new Button();
+            lblFechaNacimiento = new Label();
+            dtpFechaNacimiento = new DateTimePicker();
+            lblPrimerNombre = new Label();
+            txtPrimerNombre = new TextBox();
+            txtSegundoNombre = new TextBox();
+            lblSegundoNombre = new Label();
+            txtPrimerApellido = new TextBox();
+            lblPrimerApellido = new Label();
+            txtSegundoApellido = new TextBox();
+            lblSegundoApellido = new Label();
+            chkTitular = new CheckBox();
+            lblTitular = new Label();
+            rdbFemenino = new RadioButton();
+            lblSexo = new Label();
+            rdbMasculino = new RadioButton();
+            lblTipoDocumento = new Label();
+            cboTipoDocumento = new ComboBox();
+            erpMensaje = new ErrorProvider(components);
+            ttpMensaje = new ToolTip(components);
+            txtIngresoBase = new TextBox();
+            lblIngresoBase = new Label();
+            lblCelular = new Label();
+            txtCelular = new MaskedTextBox();
+            txtNumeroDocumento = new TextBox();
+            lblNumeroDocumento = new Label();
+            ((System.ComponentModel.ISupportInitialize)erpMensaje).BeginInit();
+            SuspendLayout();
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnGuardar.Location = new System.Drawing.Point(12, 571);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(776, 41);
-            this.btnGuardar.TabIndex = 10;
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.UseVisualStyleBackColor = true;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            btnGuardar.Dock = DockStyle.Bottom;
+            btnGuardar.Location = new Point(0, 704);
+            btnGuardar.Margin = new Padding(3, 4, 3, 4);
+            btnGuardar.Name = "btnGuardar";
+            btnGuardar.Size = new Size(996, 55);
+            btnGuardar.TabIndex = 10;
+            btnGuardar.Text = "Guardar";
+            btnGuardar.UseVisualStyleBackColor = true;
+            btnGuardar.Click += btnGuardar_Click;
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancelar.Location = new System.Drawing.Point(12, 618);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(776, 36);
-            this.btnCancelar.TabIndex = 11;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
+            btnCancelar.Dock = DockStyle.Bottom;
+            btnCancelar.Location = new Point(0, 649);
+            btnCancelar.Margin = new Padding(3, 4, 3, 4);
+            btnCancelar.Name = "btnCancelar";
+            btnCancelar.Size = new Size(996, 55);
+            btnCancelar.TabIndex = 11;
+            btnCancelar.Text = "Cancelar";
+            btnCancelar.UseVisualStyleBackColor = true;
             // 
             // lblFechaNacimiento
             // 
-            this.lblFechaNacimiento.AutoSize = true;
-            this.lblFechaNacimiento.Location = new System.Drawing.Point(26, 324);
-            this.lblFechaNacimiento.Name = "lblFechaNacimiento";
-            this.lblFechaNacimiento.Size = new System.Drawing.Size(119, 15);
-            this.lblFechaNacimiento.TabIndex = 8;
-            this.lblFechaNacimiento.Text = "&Fecha de Nacimiento";
+            lblFechaNacimiento.AutoSize = true;
+            lblFechaNacimiento.Location = new Point(32, 392);
+            lblFechaNacimiento.Name = "lblFechaNacimiento";
+            lblFechaNacimiento.Size = new Size(149, 20);
+            lblFechaNacimiento.TabIndex = 8;
+            lblFechaNacimiento.Text = "&Fecha de Nacimiento";
             // 
             // dtpFechaNacimiento
             // 
-            this.dtpFechaNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaNacimiento.Location = new System.Drawing.Point(155, 324);
-            this.dtpFechaNacimiento.Name = "dtpFechaNacimiento";
-            this.dtpFechaNacimiento.Size = new System.Drawing.Size(614, 23);
-            this.dtpFechaNacimiento.TabIndex = 9;
+            dtpFechaNacimiento.Format = DateTimePickerFormat.Short;
+            dtpFechaNacimiento.Location = new Point(264, 402);
+            dtpFechaNacimiento.Margin = new Padding(3, 4, 3, 4);
+            dtpFechaNacimiento.Name = "dtpFechaNacimiento";
+            dtpFechaNacimiento.Size = new Size(701, 27);
+            dtpFechaNacimiento.TabIndex = 9;
             // 
             // lblPrimerNombre
             // 
-            this.lblPrimerNombre.AutoSize = true;
-            this.lblPrimerNombre.Location = new System.Drawing.Point(26, 52);
-            this.lblPrimerNombre.Name = "lblPrimerNombre";
-            this.lblPrimerNombre.Size = new System.Drawing.Size(89, 15);
-            this.lblPrimerNombre.TabIndex = 0;
-            this.lblPrimerNombre.Text = "&Primer Nombre";
+            lblPrimerNombre.AutoSize = true;
+            lblPrimerNombre.Location = new Point(30, 69);
+            lblPrimerNombre.Name = "lblPrimerNombre";
+            lblPrimerNombre.Size = new Size(111, 20);
+            lblPrimerNombre.TabIndex = 0;
+            lblPrimerNombre.Text = "&Primer Nombre";
             // 
             // txtPrimerNombre
             // 
-            this.txtPrimerNombre.Location = new System.Drawing.Point(158, 52);
-            this.txtPrimerNombre.Name = "txtPrimerNombre";
-            this.txtPrimerNombre.Size = new System.Drawing.Size(611, 23);
-            this.txtPrimerNombre.TabIndex = 1;
-            this.ttpMensaje.SetToolTip(this.txtPrimerNombre, "Ingrese el primer nombre del paciente");
+            txtPrimerNombre.Location = new Point(264, 69);
+            txtPrimerNombre.Margin = new Padding(3, 4, 3, 4);
+            txtPrimerNombre.Name = "txtPrimerNombre";
+            txtPrimerNombre.Size = new Size(698, 27);
+            txtPrimerNombre.TabIndex = 1;
+            ttpMensaje.SetToolTip(txtPrimerNombre, "Ingrese el primer nombre del paciente");
             // 
             // txtSegundoNombre
             // 
-            this.txtSegundoNombre.Location = new System.Drawing.Point(158, 94);
-            this.txtSegundoNombre.Name = "txtSegundoNombre";
-            this.txtSegundoNombre.Size = new System.Drawing.Size(611, 23);
-            this.txtSegundoNombre.TabIndex = 3;
+            txtSegundoNombre.Location = new Point(264, 126);
+            txtSegundoNombre.Margin = new Padding(3, 4, 3, 4);
+            txtSegundoNombre.Name = "txtSegundoNombre";
+            txtSegundoNombre.Size = new Size(698, 27);
+            txtSegundoNombre.TabIndex = 3;
             // 
             // lblSegundoNombre
             // 
-            this.lblSegundoNombre.AutoSize = true;
-            this.lblSegundoNombre.Location = new System.Drawing.Point(26, 94);
-            this.lblSegundoNombre.Name = "lblSegundoNombre";
-            this.lblSegundoNombre.Size = new System.Drawing.Size(101, 15);
-            this.lblSegundoNombre.TabIndex = 2;
-            this.lblSegundoNombre.Text = "&Segundo Nombre";
+            lblSegundoNombre.AutoSize = true;
+            lblSegundoNombre.Location = new Point(30, 124);
+            lblSegundoNombre.Name = "lblSegundoNombre";
+            lblSegundoNombre.Size = new Size(127, 20);
+            lblSegundoNombre.TabIndex = 2;
+            lblSegundoNombre.Text = "&Segundo Nombre";
             // 
             // txtPrimerApellido
             // 
-            this.txtPrimerApellido.Location = new System.Drawing.Point(158, 138);
-            this.txtPrimerApellido.Name = "txtPrimerApellido";
-            this.txtPrimerApellido.Size = new System.Drawing.Size(611, 23);
-            this.txtPrimerApellido.TabIndex = 5;
+            txtPrimerApellido.Location = new Point(264, 183);
+            txtPrimerApellido.Margin = new Padding(3, 4, 3, 4);
+            txtPrimerApellido.Name = "txtPrimerApellido";
+            txtPrimerApellido.Size = new Size(698, 27);
+            txtPrimerApellido.TabIndex = 5;
             // 
             // lblPrimerApellido
             // 
-            this.lblPrimerApellido.AutoSize = true;
-            this.lblPrimerApellido.Location = new System.Drawing.Point(26, 138);
-            this.lblPrimerApellido.Name = "lblPrimerApellido";
-            this.lblPrimerApellido.Size = new System.Drawing.Size(89, 15);
-            this.lblPrimerApellido.TabIndex = 4;
-            this.lblPrimerApellido.Text = "Primer &Apellido";
+            lblPrimerApellido.AutoSize = true;
+            lblPrimerApellido.Location = new Point(30, 179);
+            lblPrimerApellido.Name = "lblPrimerApellido";
+            lblPrimerApellido.Size = new Size(113, 20);
+            lblPrimerApellido.TabIndex = 4;
+            lblPrimerApellido.Text = "Primer &Apellido";
             // 
             // txtSegundoApellido
             // 
-            this.txtSegundoApellido.Location = new System.Drawing.Point(158, 192);
-            this.txtSegundoApellido.Name = "txtSegundoApellido";
-            this.txtSegundoApellido.Size = new System.Drawing.Size(611, 23);
-            this.txtSegundoApellido.TabIndex = 7;
+            txtSegundoApellido.Location = new Point(264, 240);
+            txtSegundoApellido.Margin = new Padding(3, 4, 3, 4);
+            txtSegundoApellido.Name = "txtSegundoApellido";
+            txtSegundoApellido.Size = new Size(698, 27);
+            txtSegundoApellido.TabIndex = 7;
             // 
             // lblSegundoApellido
             // 
-            this.lblSegundoApellido.AutoSize = true;
-            this.lblSegundoApellido.Location = new System.Drawing.Point(26, 192);
-            this.lblSegundoApellido.Name = "lblSegundoApellido";
-            this.lblSegundoApellido.Size = new System.Drawing.Size(101, 15);
-            this.lblSegundoApellido.TabIndex = 6;
-            this.lblSegundoApellido.Text = "S&egundo Apellido";
+            lblSegundoApellido.AutoSize = true;
+            lblSegundoApellido.Location = new Point(30, 234);
+            lblSegundoApellido.Name = "lblSegundoApellido";
+            lblSegundoApellido.Size = new Size(129, 20);
+            lblSegundoApellido.TabIndex = 6;
+            lblSegundoApellido.Text = "S&egundo Apellido";
             // 
             // chkTitular
             // 
-            this.chkTitular.AutoSize = true;
-            this.chkTitular.Location = new System.Drawing.Point(155, 373);
-            this.chkTitular.Name = "chkTitular";
-            this.chkTitular.Size = new System.Drawing.Size(15, 14);
-            this.chkTitular.TabIndex = 12;
-            this.chkTitular.UseVisualStyleBackColor = true;
+            chkTitular.AutoSize = true;
+            chkTitular.Location = new Point(264, 445);
+            chkTitular.Margin = new Padding(3, 4, 3, 4);
+            chkTitular.Name = "chkTitular";
+            chkTitular.Size = new Size(18, 17);
+            chkTitular.TabIndex = 12;
+            chkTitular.UseVisualStyleBackColor = true;
             // 
             // lblTitular
             // 
-            this.lblTitular.AutoSize = true;
-            this.lblTitular.Location = new System.Drawing.Point(26, 372);
-            this.lblTitular.Name = "lblTitular";
-            this.lblTitular.Size = new System.Drawing.Size(40, 15);
-            this.lblTitular.TabIndex = 13;
-            this.lblTitular.Text = "Titular";
+            lblTitular.AutoSize = true;
+            lblTitular.Location = new Point(34, 442);
+            lblTitular.Name = "lblTitular";
+            lblTitular.Size = new Size(51, 20);
+            lblTitular.TabIndex = 13;
+            lblTitular.Text = "Titular";
             // 
             // rdbFemenino
             // 
-            this.rdbFemenino.AutoSize = true;
-            this.rdbFemenino.Location = new System.Drawing.Point(155, 410);
-            this.rdbFemenino.Name = "rdbFemenino";
-            this.rdbFemenino.Size = new System.Drawing.Size(78, 19);
-            this.rdbFemenino.TabIndex = 14;
-            this.rdbFemenino.TabStop = true;
-            this.rdbFemenino.Text = "Femenino";
-            this.rdbFemenino.UseVisualStyleBackColor = true;
+            rdbFemenino.AutoSize = true;
+            rdbFemenino.Location = new Point(264, 489);
+            rdbFemenino.Margin = new Padding(3, 4, 3, 4);
+            rdbFemenino.Name = "rdbFemenino";
+            rdbFemenino.Size = new Size(95, 24);
+            rdbFemenino.TabIndex = 14;
+            rdbFemenino.TabStop = true;
+            rdbFemenino.Text = "Femenino";
+            rdbFemenino.UseVisualStyleBackColor = true;
             // 
             // lblSexo
             // 
-            this.lblSexo.AutoSize = true;
-            this.lblSexo.Location = new System.Drawing.Point(26, 414);
-            this.lblSexo.Name = "lblSexo";
-            this.lblSexo.Size = new System.Drawing.Size(32, 15);
-            this.lblSexo.TabIndex = 15;
-            this.lblSexo.Text = "Sexo";
+            lblSexo.AutoSize = true;
+            lblSexo.Location = new Point(34, 491);
+            lblSexo.Name = "lblSexo";
+            lblSexo.Size = new Size(41, 20);
+            lblSexo.TabIndex = 15;
+            lblSexo.Text = "Sexo";
             // 
             // rdbMasculino
             // 
-            this.rdbMasculino.AutoSize = true;
-            this.rdbMasculino.Location = new System.Drawing.Point(272, 410);
-            this.rdbMasculino.Name = "rdbMasculino";
-            this.rdbMasculino.Size = new System.Drawing.Size(80, 19);
-            this.rdbMasculino.TabIndex = 16;
-            this.rdbMasculino.TabStop = true;
-            this.rdbMasculino.Text = "Masculino";
-            this.rdbMasculino.UseVisualStyleBackColor = true;
+            rdbMasculino.AutoSize = true;
+            rdbMasculino.Location = new Point(389, 491);
+            rdbMasculino.Margin = new Padding(3, 4, 3, 4);
+            rdbMasculino.Name = "rdbMasculino";
+            rdbMasculino.Size = new Size(97, 24);
+            rdbMasculino.TabIndex = 16;
+            rdbMasculino.TabStop = true;
+            rdbMasculino.Text = "Masculino";
+            rdbMasculino.UseVisualStyleBackColor = true;
             // 
             // lblTipoDocumento
             // 
-            this.lblTipoDocumento.AutoSize = true;
-            this.lblTipoDocumento.Location = new System.Drawing.Point(28, 253);
-            this.lblTipoDocumento.Name = "lblTipoDocumento";
-            this.lblTipoDocumento.Size = new System.Drawing.Size(112, 15);
-            this.lblTipoDocumento.TabIndex = 17;
-            this.lblTipoDocumento.Text = "Tipo de Documento";
+            lblTipoDocumento.AutoSize = true;
+            lblTipoDocumento.Location = new Point(30, 289);
+            lblTipoDocumento.Name = "lblTipoDocumento";
+            lblTipoDocumento.Size = new Size(142, 20);
+            lblTipoDocumento.TabIndex = 17;
+            lblTipoDocumento.Text = "Tipo de Documento";
             // 
             // cboTipoDocumento
             // 
-            this.cboTipoDocumento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboTipoDocumento.FormattingEnabled = true;
-            this.cboTipoDocumento.Location = new System.Drawing.Point(158, 256);
-            this.cboTipoDocumento.Name = "cboTipoDocumento";
-            this.cboTipoDocumento.Size = new System.Drawing.Size(611, 23);
-            this.cboTipoDocumento.TabIndex = 18;
+            cboTipoDocumento.DropDownStyle = ComboBoxStyle.DropDownList;
+            cboTipoDocumento.FormattingEnabled = true;
+            cboTipoDocumento.Location = new Point(264, 297);
+            cboTipoDocumento.Margin = new Padding(3, 4, 3, 4);
+            cboTipoDocumento.Name = "cboTipoDocumento";
+            cboTipoDocumento.Size = new Size(698, 28);
+            cboTipoDocumento.TabIndex = 18;
             // 
             // erpMensaje
             // 
-            this.erpMensaje.ContainerControl = this;
+            erpMensaje.ContainerControl = this;
             // 
             // txtIngresoBase
             // 
-            this.txtIngresoBase.Location = new System.Drawing.Point(160, 454);
-            this.txtIngresoBase.MaxLength = 20;
-            this.txtIngresoBase.Name = "txtIngresoBase";
-            this.txtIngresoBase.Size = new System.Drawing.Size(611, 23);
-            this.txtIngresoBase.TabIndex = 20;
-            this.txtIngresoBase.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIngresoBase_KeyPress);
-            this.txtIngresoBase.Validating += new System.ComponentModel.CancelEventHandler(this.txtIngresoBase_Validating);
+            txtIngresoBase.Location = new Point(264, 533);
+            txtIngresoBase.Margin = new Padding(3, 4, 3, 4);
+            txtIngresoBase.MaxLength = 20;
+            txtIngresoBase.Name = "txtIngresoBase";
+            txtIngresoBase.Size = new Size(698, 27);
+            txtIngresoBase.TabIndex = 20;
+            txtIngresoBase.KeyPress += txtIngresoBase_KeyPress;
+            txtIngresoBase.Validating += txtIngresoBase_Validating;
             // 
             // lblIngresoBase
             // 
-            this.lblIngresoBase.AutoSize = true;
-            this.lblIngresoBase.Location = new System.Drawing.Point(28, 454);
-            this.lblIngresoBase.Name = "lblIngresoBase";
-            this.lblIngresoBase.Size = new System.Drawing.Size(73, 15);
-            this.lblIngresoBase.TabIndex = 19;
-            this.lblIngresoBase.Text = "Ingreso Base";
+            lblIngresoBase.AutoSize = true;
+            lblIngresoBase.Location = new Point(34, 536);
+            lblIngresoBase.Name = "lblIngresoBase";
+            lblIngresoBase.Size = new Size(93, 20);
+            lblIngresoBase.TabIndex = 19;
+            lblIngresoBase.Text = "Ingreso Base";
             // 
             // lblCelular
             // 
-            this.lblCelular.AutoSize = true;
-            this.lblCelular.Location = new System.Drawing.Point(26, 509);
-            this.lblCelular.Name = "lblCelular";
-            this.lblCelular.Size = new System.Drawing.Size(44, 15);
-            this.lblCelular.TabIndex = 21;
-            this.lblCelular.Text = "Celular";
+            lblCelular.AutoSize = true;
+            lblCelular.Location = new Point(34, 586);
+            lblCelular.Name = "lblCelular";
+            lblCelular.Size = new Size(55, 20);
+            lblCelular.TabIndex = 21;
+            lblCelular.Text = "Celular";
             // 
-            // maskedTextBox1
+            // txtCelular
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(160, 509);
-            this.maskedTextBox1.Mask = "000-000-0000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(609, 23);
-            this.maskedTextBox1.TabIndex = 22;
+            txtCelular.Location = new Point(264, 586);
+            txtCelular.Margin = new Padding(3, 4, 3, 4);
+            txtCelular.Mask = "000-000-0000";
+            txtCelular.Name = "txtCelular";
+            txtCelular.Size = new Size(695, 27);
+            txtCelular.TabIndex = 22;
+            // 
+            // txtNumeroDocumento
+            // 
+            txtNumeroDocumento.Location = new Point(264, 355);
+            txtNumeroDocumento.Margin = new Padding(3, 4, 3, 4);
+            txtNumeroDocumento.MaxLength = 20;
+            txtNumeroDocumento.Name = "txtNumeroDocumento";
+            txtNumeroDocumento.Size = new Size(698, 27);
+            txtNumeroDocumento.TabIndex = 24;
+            // 
+            // lblNumeroDocumento
+            // 
+            lblNumeroDocumento.AutoSize = true;
+            lblNumeroDocumento.Location = new Point(32, 344);
+            lblNumeroDocumento.Name = "lblNumeroDocumento";
+            lblNumeroDocumento.Size = new Size(166, 20);
+            lblNumeroDocumento.TabIndex = 23;
+            lblNumeroDocumento.Text = "Número de Documento";
             // 
             // FormularioPaciente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 665);
-            this.Controls.Add(this.maskedTextBox1);
-            this.Controls.Add(this.lblCelular);
-            this.Controls.Add(this.txtIngresoBase);
-            this.Controls.Add(this.lblIngresoBase);
-            this.Controls.Add(this.cboTipoDocumento);
-            this.Controls.Add(this.lblTipoDocumento);
-            this.Controls.Add(this.rdbMasculino);
-            this.Controls.Add(this.lblSexo);
-            this.Controls.Add(this.rdbFemenino);
-            this.Controls.Add(this.lblTitular);
-            this.Controls.Add(this.chkTitular);
-            this.Controls.Add(this.txtSegundoApellido);
-            this.Controls.Add(this.lblSegundoApellido);
-            this.Controls.Add(this.txtPrimerApellido);
-            this.Controls.Add(this.lblPrimerApellido);
-            this.Controls.Add(this.txtSegundoNombre);
-            this.Controls.Add(this.lblSegundoNombre);
-            this.Controls.Add(this.txtPrimerNombre);
-            this.Controls.Add(this.lblPrimerNombre);
-            this.Controls.Add(this.dtpFechaNacimiento);
-            this.Controls.Add(this.lblFechaNacimiento);
-            this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.btnGuardar);
-            this.Name = "FormularioPaciente";
-            this.Text = "Paciente";
-            this.Load += new System.EventHandler(this.FormularioPaciente_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.erpMensaje)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(996, 759);
+            Controls.Add(txtNumeroDocumento);
+            Controls.Add(lblNumeroDocumento);
+            Controls.Add(txtCelular);
+            Controls.Add(lblCelular);
+            Controls.Add(txtIngresoBase);
+            Controls.Add(lblIngresoBase);
+            Controls.Add(cboTipoDocumento);
+            Controls.Add(lblTipoDocumento);
+            Controls.Add(rdbMasculino);
+            Controls.Add(lblSexo);
+            Controls.Add(rdbFemenino);
+            Controls.Add(lblTitular);
+            Controls.Add(chkTitular);
+            Controls.Add(txtSegundoApellido);
+            Controls.Add(lblSegundoApellido);
+            Controls.Add(txtPrimerApellido);
+            Controls.Add(lblPrimerApellido);
+            Controls.Add(txtSegundoNombre);
+            Controls.Add(lblSegundoNombre);
+            Controls.Add(txtPrimerNombre);
+            Controls.Add(lblPrimerNombre);
+            Controls.Add(dtpFechaNacimiento);
+            Controls.Add(lblFechaNacimiento);
+            Controls.Add(btnCancelar);
+            Controls.Add(btnGuardar);
+            Margin = new Padding(3, 4, 3, 4);
+            Name = "FormularioPaciente";
+            Text = "Paciente";
+            Load += FormularioPaciente_Load;
+            ((System.ComponentModel.ISupportInitialize)erpMensaje).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -330,6 +365,8 @@
         private TextBox txtIngresoBase;
         private Label lblIngresoBase;
         private Label lblCelular;
-        private MaskedTextBox maskedTextBox1;
+        private MaskedTextBox txtCelular;
+        private TextBox txtNumeroDocumento;
+        private Label lblNumeroDocumento;
     }
 }

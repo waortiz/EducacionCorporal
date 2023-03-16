@@ -1,4 +1,4 @@
-﻿using EducacionCorporal.Entidades;
+﻿using Entidades;
 
 namespace Repositorio
 {

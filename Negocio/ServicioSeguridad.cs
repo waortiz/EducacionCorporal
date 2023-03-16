@@ -1,14 +1,21 @@
-﻿namespace Negocio
+﻿using Repositorio;
+
+namespace Negocio
 {
     public class ServicioSeguridad : IServicioSeguridad
     {
-        private const string USUARIO = "wortiz";
-        private const string CONTRASEÑA = "123456";
+        private IRepositorioUsuario repositorioUsuario;
+
+        public ServicioSeguridad()
+        {
+            repositorioUsuario = new RepositorioUsuarioEF();
+        }
 
         public bool ValidarUsuario(string nombreUsuario, string contraseña)
         {
-            if (nombreUsuario == USUARIO &&
-                    contraseña == CONTRASEÑA)
+            var usuario = repositorioUsuario.ObtenerUsuario(nombreUsuario);
+            if (nombreUsuario == usuario.NombreUsuario &&
+                    contraseña == usuario.Clave)
             {
                 return true;
             }
